@@ -11,16 +11,37 @@
     <modules>
         <module>storm</module>
         <module>spark</module>
+        <module>flink</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- ======== storm dependency start ======== -->
             <dependency>
                 <groupId>org.apache.storm</groupId>
                 <artifactId>storm-core</artifactId>
                 <version>1.2.1</version>
-                <scope>provided</scope>
             </dependency>
+            <!-- ======== storm dependency start ======== -->
+
+            <!-- ======== flink dependency start ======== -->
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-statebackend-rocksdb_2.12</artifactId>
+                <version>1.9.1</version>
+            </dependency>
+            <!-- ======== flink dependency end ======== -->
+
+
+            <!-- ======== rocksdb dependency end ======== -->
+            <dependency>
+                <groupId>org.rocksdb</groupId>
+                <artifactId>rocksdbjni</artifactId>
+                <version>6.3.6</version>
+            </dependency>
+            <!-- ======== rocksdb dependency end ======== -->
+
         </dependencies>
     </dependencyManagement>
 
